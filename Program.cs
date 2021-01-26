@@ -23,7 +23,7 @@ namespace RegexLab
         //Checks for valid name against REGEX string
         public static void VerifyName(string input)
         {
-            if (Regex.IsMatch(input, "^[A-Z]{1}[a-z]{1,29}$"))
+            if (Regex.IsMatch(input, "^[A-Z][a-z]{1,29}$"))
             {
                 Console.WriteLine("Valid name!");
             }
@@ -36,7 +36,7 @@ namespace RegexLab
         //Checks for valid email agains REGEX string
         public static void VerifyEmail(string input)
         {
-            if (Regex.IsMatch(input, "^[0-9A-Za-z]{5,30}@{1}[0-9A-Za-z]{5,10}\\.{1}[0-9A-Za-z]{2,3}$"))
+            if (Regex.IsMatch(input, "^[0-9A-Za-z]{5,30}@[0-9A-Za-z]{5,10}\\.[0-9A-Za-z]{2,3}$"))
             {
                 Console.WriteLine("Valid email!");
             }
@@ -60,7 +60,7 @@ namespace RegexLab
 
         public static void VerifyDate(string input)
         {
-            if (Regex.IsMatch(input, "^(0{1}[1-9]{1}|[1-2]{1}[0-9]{1}|3{1}[0-1]{1})\\/(0{1}[1-9]{1}|[1-2]{1}[0-2]{1})\\/[0-9]{4}$"))
+            if (Regex.IsMatch(input, "^(0[1-9]|[1-2][0-9]|3[0-1])\\/(0[1-9]|[1-2][0-2])\\/[0-9]{4}$"))
             {
                 Console.WriteLine("Valid date!");
             }
